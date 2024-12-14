@@ -1,0 +1,150 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Member discount Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+        background-color: white;   
+        width: 30;  
+        color: rgb(0, 174, 255);   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+
+.container {   
+    background-color:rgb(110, 177, 210);
+    padding: 25px;
+    text-align: center;
+
+}   
+.functionbtn {   
+        width: auto;   
+        padding: 5px 5px;  
+        margin: 5px 5px;  
+
+    }   
+.currentbtn{
+    color: gray;
+    width: auto;   
+    padding: 5px 5px;  
+    margin: 5px 5px;  
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: orange;
+}
+
+
+.popup .icon {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+
+</style>   
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="Discount_page.html"> 中/Eng</a></b><br>
+    <div>
+      <center><p style="color:rgb(0, 174, 255);"><img src="Icon.png" alt="Icon" width="80" height="80"><a href="Chinese_User_Page.html"><img src="Icon-text.png" alt="Icon-text" width="115" height="85"><img src="Member-icon.png" alt="Member-icon" width="55" height="65"></a></p></center>
+        <center><button type="button" class="functionbtn">  <a href="Chinese_Vote_page.html"> 投票 </a></button>
+                <button type="button" class="functionbtn">  <a href="Chinese_MemberMenu_page.html">  菜單 </a></button>
+                <button class="currentbtn"> 優惠  </button>
+                <button type="button" class="functionbtn">  <a href="Chinese_main_menu.html">  離開 </a></button></center>
+    </div>  
+
+    <form>  
+        <div class="container">   
+            <a href="#10%off">  <img src="tenoff.png" width="270" height="120"> </a>
+            <br><br>
+            <a href="#freedrink"> <img src="freedrink member.png" width="270" height="120"> </a>
+            <br><br>
+            <a href="#payonline"> <img src="payonline member.png" width="270" height="120"> </a>
+            <br><br><br><br><br>
+        </div>   
+    </form>   
+
+    <div id="10%off" class = "overlay">
+        <div class = "popup">
+          <div class = "icon"> <img src="tenoffIcon.png" width="80" height="80"> </div>
+          <a class="close" href="#">×</a>
+          <br><br><br><br><br><br>
+          <b style = "font-size:200%;">你可以擁有一個月 </b><br>
+          <b style="color:rgba(28, 132, 167, 1); font-size:300%;">九折優惠</b>
+          <div style = "margin: 7px;"> <img src = "chinesediscount1pic.png" width="300" height="280"> </div>
+        </div>
+    </div>
+
+    <div id="freedrink" class = "overlay">
+        <div class = "popup">
+          <div class = "icon"> <img src="freedrinkIcon.png" width="80" height="80"> </div>
+          <a class="close" href="#">×</a>
+          <br><br><br><br><br><br>
+          <b> 每次下單獲得 </b> <b style = "color:rgba(28, 132, 167, 1); font-size:230%;">免費飲品</b> <b>一杯 </b><br>
+          <br><br><br>
+          <div > <img src = "discount2picmember.png" width="320" height="280"> </div>
+        </div>
+    </div>
+
+    <div id="payonline" class = "overlay">
+      <div class = "popup">
+        <div class = "icon"> <img src="payonlineIcon.png" width="80" height="80"> </div>
+        <a class="close" href="#">×</a>
+        <br><br><br><br><br><br>
+        <b>擁有 </b> <b style = "color:rgba(28, 132, 167, 1); font-size:230%;"> 網上付款服務</b> 
+        <br><br><br>
+        <div > <img src = "discount3picmember.png" width="320" height="280"> </div>
+      </div>
+  </div>
+</body>     
+</html>

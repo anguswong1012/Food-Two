@@ -1,0 +1,102 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Vote Page </title>  
+<script>
+    for (var i = 1; i <= 12; i++) {
+        window["voteresult" + i] = parseInt(localStorage.getItem("voteresult" + i))||0;
+    }
+    var chinesefoodlist=["魚香肉絲", "宮保雞丁", "回鍋肉", 
+                "蒜蓉炒茄子", "家常豆腐", "蒜蓉西蘭花", 
+                "炸雞翅", "糖醋肉", "京醬肉絲", "麻婆豆腐", 
+                "紅燒牛肉", "薑蔥蒸魚"];
+    var cflist=JSON.stringify(chinesefoodlist);
+    localStorage.setItem("chinesefoodlist", cflist);
+    
+    for (var i = 1; i <= 12; i++) {
+        (function(index) {
+            window["vote" + index] = function() {
+            window["voteresult" + index] += 1;
+            for (var j = 1; j <= 12; j++) {
+                localStorage.setItem("voteresult" + j, window["voteresult" + j]);
+            }
+            window.location.href = "Chinese_VoteResult_page.html";
+            };
+        })(i);
+        }
+</script>
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+        background-color: white;   
+        width: 30;  
+        color: rgb(0, 174, 255);   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+}  
+.container {   
+    background-color:rgb(110, 177, 210);
+    padding: 25px;
+    text-align: center;
+    }   
+.functionbtn {   
+        width: auto;   
+        padding: 5px 5px;  
+        margin: 5px 5px;  
+
+    }   
+.currentbtn{
+    color: gray;
+    width: auto;   
+    padding: 5px 5px;  
+    margin: 5px 5px;  
+}
+table{
+    border: 1px;
+    margin: auto;
+    border-spacing: 10px;
+}
+th, td{
+    background-color: white;
+    border: 5px solid rgb(132, 209, 241);
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+.confirmbtn{
+    background-color:rgb(110, 177, 210);
+}
+
+</style>   
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="Vote_page.html"> 中/Eng</a></b><br>  
+    <div>
+        <center><p style="color:rgb(0, 174, 255);"><img src="Icon.png" alt="Icon" width="80" height="80"><a href="Chinese_User_Page.html"><img src="Icon-text.png" alt="Icon-text" width="115" height="85"><img src="Member-icon.png" alt="Member-icon" width="55" height="65"></a></p></center>
+        <center>
+            <button class="currentbtn"> 投票 </button>
+            <button type="button" class="functionbtn">  <a href="Chinese_MemberMenu_page.html"> 菜單 </a></button>
+            <button type="button" class="functionbtn">  <a href="Chinese_Discount_page.html"> 優惠 </a></button>
+            <button type="button" class="functionbtn">  <a href="Chinese_main_menu.html"> 離開 </a></button>
+        </center>
+    </div>  
+ 
+        <div class="container">  
+            <table>
+                <script>
+                    for (var i=1;i<=chinesefoodlist.length;i++){
+                        document.write("<tr><td>"+chinesefoodlist[i-1]+"</td><td><button onclick='vote"+i+"()'>Vote</button></td></tr>");
+                    }
+                </script>
+            </table> 
+        </div>      
+</body>     
+</html>  

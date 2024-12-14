@@ -1,0 +1,150 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Member discount Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+        background-color: white;   
+        width: 30;  
+        color: rgb(0, 174, 255);   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+
+.container {   
+    background-color:rgb(110, 177, 210);
+    padding: 25px;
+    text-align: center;
+
+}   
+.functionbtn {   
+        width: auto;   
+        padding: 5px 5px;  
+        margin: 5px 5px;  
+
+    }   
+.currentbtn{
+    color: gray;
+    width: auto;   
+    padding: 5px 5px;  
+    margin: 5px 5px;  
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: orange;
+}
+
+
+.popup .icon {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+
+</style>   
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="Chinese_Discount_page.html"> 中/Eng</a></b><br>
+    <div>
+      <center><p style="color:rgb(0, 174, 255);"><img src="Icon.png" alt="Icon" width="80" height="80"><a href="User_Page.html"><img src="Icon-text.png" alt="Icon-text" width="115" height="85"><img src="Member-icon.png" alt="Member-icon" width="55" height="65"></a></p></center>
+        <center><button type="button" class="functionbtn">  <a href="Vote_page.html"> Vote </a></button>
+                <button type="button" class="functionbtn">  <a href="MemberMenu_page.html"> Menu </a></button>
+                <button class="currentbtn"> Discount </button>
+                <button type="button" class="functionbtn">  <a href="index.html"> Exit </a></button></center>
+    </div>  
+
+    <form>  
+        <div class="container">   
+            <a href="#10%off">  <img src="tenoff.png" width="270" height="120"> </a>
+            <br><br>
+            <a href="#freedrink"> <img src="freedrink member.png" width="270" height="120"> </a>
+            <br><br>
+            <a href="#payonline"> <img src="payonline member.png" width="270" height="120"> </a>
+            <br><br><br><br><br>
+        </div>   
+    </form>   
+
+    <div id="10%off" class = "overlay">
+        <div class = "popup">
+          <div class = "icon"> <img src="tenoffIcon.png" width="80" height="80"> </div>
+          <a class="close" href="#">×</a>
+          <br><br><br><br><br><br>
+          <b style = "font-size:80%;">You are getting </b><b style = "color:rgba(28, 132, 167, 1); font-size:120%;">10% off discount </b> <b style = "font-size:80%;">during</b><br>
+          <b style="color:rgba(28, 132, 167, 1); font-size:120%;"> 1 month period</b>
+          <div style = "margin: 7px;"> <img src = "discount1pic.png" width="300" height="280"> </div>
+        </div>
+    </div>
+
+    <div id="freedrink" class = "overlay">
+        <div class = "popup">
+          <div class = "icon"> <img src="freedrinkIcon.png" width="80" height="80"> </div>
+          <a class="close" href="#">×</a>
+          <br><br><br><br><br><br>
+          <b>Get a </b> <b style = "color:rgba(28, 132, 167, 1); font-size:230%;">free drink </b> <br> <b>for every order </b><br>
+          <br><br><br>
+          <div > <img src = "discount2picmember.png" width="320" height="280"> </div>
+        </div>
+    </div>
+
+    <div id="payonline" class = "overlay">
+      <div class = "popup">
+        <div class = "icon"> <img src="payonlineIcon.png" width="80" height="80"> </div>
+        <a class="close" href="#">×</a>
+        <br><br><br><br><br><br>
+        <b>You can have a </b> <b style = "color:rgba(28, 132, 167, 1); font-size:230%;">Online Payment Service </b> <br> <b>for every order </b><br>
+        <br><br><br>
+        <div > <img src = "discount3picmember.png" width="320" height="280"> </div>
+      </div>
+  </div>
+</body>     
+</html>

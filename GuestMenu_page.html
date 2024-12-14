@@ -1,0 +1,246 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Guest Menu Page </title>  
+<script>
+    for (var i=1;i<=6;i++){
+        window["num"+i]=0;
+    }
+    var rnum=1;
+    
+    function plusOne1(event){
+        event.preventDefault();
+        num1++;
+        document.getElementById("numDisplay1").innerHTML=num1;
+    }
+    function minusOne1(event){
+        event.preventDefault();
+        if (num1==0){
+        num1=1;
+        }
+        num1--;  
+        document.getElementById("numDisplay1").innerHTML=num1;
+    }
+    function plusOne2(event){
+        event.preventDefault();
+        num2++;
+        document.getElementById("numDisplay2").innerHTML=num2;
+    }
+    function minusOne2(event){
+        event.preventDefault();
+        if (num2==0){
+        num2=1;
+        }
+        num2--;
+        document.getElementById("numDisplay2").innerHTML=num2;
+    }
+    function plusOne3(event){
+        event.preventDefault();
+        num3++;
+        document.getElementById("numDisplay3").innerHTML=num3;
+    }
+    function minusOne3(event){
+        event.preventDefault();
+        if (num3==0){
+        num3=1;
+        }
+        num3--;
+        document.getElementById("numDisplay3").innerHTML=num3;
+    }
+    function plusOne4(event){
+        event.preventDefault();
+        num4++;
+        document.getElementById("numDisplay4").innerHTML=num4;
+    }
+    function minusOne4(event){
+        event.preventDefault();
+        if (num4==0){
+        num4=1;
+        }
+        num4--;
+        document.getElementById("numDisplay4").innerHTML=num4;
+    }
+    function plusOne5(event){
+        event.preventDefault();
+        num5++;
+        document.getElementById("numDisplay5").innerHTML=num5;
+    }
+    function minusOne5(event){
+        event.preventDefault();
+        if (num5==0){
+        num5=1;
+        }
+        num5--;
+        document.getElementById("numDisplay5").innerHTML=num5;
+    }
+    function plusOne6(event){
+        event.preventDefault();
+        num6++;
+        document.getElementById("numDisplay6").innerHTML=num6;
+    }
+    function minusOne6(event){
+        event.preventDefault();
+        if (num6==0){
+        num6=1;
+        }
+        num6--;
+        document.getElementById("numDisplay6").innerHTML=num6;
+    }
+    function plusOner(event){
+        event.preventDefault();
+        rnum++;
+        document.getElementById("rnumDisplay").innerHTML=rnum;
+    }
+    function minusOner(event){
+        event.preventDefault();
+        if (rnum==1){
+        rnum=2;
+        }
+        rnum--;
+        document.getElementById("rnumDisplay").innerHTML=rnum;
+    }
+    function confirmOrder(){
+        var totalnum=num1+num2+num3+num4+num5+num6+rnum;
+        for (var j = 1; j <= 6; j++) {
+            localStorage.setItem("num" + j, window["num" + j]);
+        }
+        localStorage.setItem("rnum", rnum);
+        localStorage.setItem("totalnum", totalnum);
+    }
+</script>
+<style>   
+    Body {  
+      font-family: Calibri, Helvetica, sans-serif;  
+      background-color: white;  
+    }  
+    button {   
+            background-color: white;   
+            width: 30;  
+            color: rgb(0, 174, 255);   
+            padding: 15px;   
+            margin: 10px 0px;   
+            border: none;   
+            cursor: pointer;   
+             } 
+    
+    .container img{
+        border-radius: 20%;
+    }
+    
+    .container button {   
+            background-color: white;   
+            font-size: 200%;
+            width: 50px;  
+            color: rgb(0, 174, 255);   
+            padding: 15px;   
+            margin: 10px 0px;   
+            border: none;  
+            border-radius: 100%; 
+            cursor: pointer;   
+             }   
+    .container {   
+        background-color:rgb(110, 177, 210);
+        padding: 5px;
+        text-align: center;
+        }   
+    .functionbtn {   
+            width: auto;   
+            padding: 5px 5px;  
+            margin: 5px 5px;  
+    
+        }   
+    .currentbtn{
+        color: gray;
+        width: auto;   
+        padding: 5px 5px;  
+        margin: 5px 5px;  
+    }
+    table{
+        border: 1px;
+        margin: auto;
+        border-spacing: 20px;
+    }
+    th, td{
+        background-color: white;
+        border: 5px solid rgb(132, 209, 241);
+        padding: 5px;
+        text-align: center;
+        border-radius: 50px;
+    }
+    
+    
+    </style>   
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="Chinese_GuestMenu_page.html"> 中/Eng</a></b><br>
+    <div>
+        <center><p style="color:rgb(0, 174, 255);"><img src="Icon.png" alt="Icon" width="80" height="80"><img src="Icon-text.png" alt="Icon-text" width="115" height="85"><img src="Guest-icon2.png" alt="Guest-icon2" width="55" height="65"></p></center>
+        <center>
+            <button type="button" class="functionbtn">  <a href="Vote_page_guest.html"> Vote </a></button>
+            <button class="currentbtn"> Menu </a></button>
+            <button type="button" class="functionbtn">  <a href="Discount_page_guest.html"> Discount </a></button>
+            <button type="button" class="functionbtn">  <a href="index.html"> Exit </a></button>
+        </center>
+    </div>  
+ 
+    <div class="container">  
+        <table>
+            <tr>
+                <td rowspan="2"><img src="Food1-picture.png" alt="Food1" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Fish-Fragrant Shredded Pork</p></td>
+                <td rowspan="2"><button onclick="plusOne1(event)">+</button><br><br><br>
+                <span id="numDisplay1">0</span><br><br><br>
+                <button onclick="minusOne1(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Food2-picture.png" alt="Food2" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Kung Pao Chicken</p></td>
+                <td rowspan="2"><button onclick="plusOne2(event)">+</button><br><br><br>
+                <span id="numDisplay2">0</span><br><br><br>
+                <button onclick="minusOne2(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Food3-picture.png" alt="Food3" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Twice Cooked Pork</p></td>
+                <td rowspan="2"><button onclick="plusOne3(event)">+</button><br><br><br>
+                <span id="numDisplay3">0</span><br><br><br>
+                <button onclick="minusOne3(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Food4-picture.png" alt="Food4" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Stir-fried Eggplant with Spicy Garlic Sauce</p></td>
+                <td rowspan="2"><button onclick="plusOne4(event)">+</button><br><br><br>
+                <span id="numDisplay4">0</span><br><br><br>
+                <button onclick="minusOne4(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Food5-picture.png" alt="Food5" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Home-style Tofu</p></td>
+                <td rowspan="2"><button onclick="plusOne5(event)">+</button><br><br><br>
+                <span id="numDisplay5">0</span><br><br><br>
+                <button onclick="minusOne5(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Food6-picture.png" alt="Food6" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Garlic Broccoli</p></td>
+                <td rowspan="2"><button onclick="plusOne6(event)">+</button><br><br><br>
+                <span id="numDisplay6">0</span><br><br><br>
+                <button onclick="minusOne6(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="2"><img src="Rice-picture.png" alt="Rice" width="200" height="180"><br><p style="color:rgb(12, 69, 96);">Rice</p></td>
+                <td rowspan="2"><button onclick="plusOner(event)">+</button><br><br><br>
+                <span id="rnumDisplay">1</span><br><br><br>
+                <button onclick="minusOner(event)">-</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2"><a href="GuestPayment_page.html" onclick="confirmOrder()"><br><b style="font-size: 200%;">Confirm</b><br><br></a></td>
+            </tr>
+        </table> 
+    </div>       
+</body>     
+</html>  

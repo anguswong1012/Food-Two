@@ -1,0 +1,211 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Member Payment Page </title>   
+<script>
+    var tnum=localStorage.getItem("totalnum");
+    for (var i = 1; i <= 6; i++) {
+        window["num" + i] = parseInt(localStorage.getItem("num" + i));
+    }
+    var rnum=localStorage.getItem("rnum");
+</script>
+<style>
+    Body {  
+        font-size: 20px;
+        font-family: Calibri, Helvetica, sans-serif;  
+        background-color: white;
+        color: rgb(110, 177, 210);  
+        text-align: center;
+    }  
+    table{
+    border: 1px;
+    margin: auto;
+    border-spacing: 20px;
+    }
+
+</style>
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="GuestPayment_page.html"> 中/Eng</a></b><br>
+    <img src="Food-Icon.jpg" alt="Food-Icon" width="150" height="160">
+    <br><br>
+    <table>
+        <tr>
+            <td colspan="2">
+        <div id="tnumDisplay";></div>
+        <script>
+            var tnumContainer=document.getElementById("tnumDisplay");
+            tnumContainer.innerText="已選"+tnum+"項食品";
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num1Display"></div>
+        <script>
+            var numContainer=document.getElementById("num1Display");
+            if (num1!=0){
+                numContainer.innerText="魚香肉絲 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num1Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num1Display2");
+            if (num1!=0){
+                numContainer.innerText="| "+num1;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num2Display"></div>
+        <script>
+            var numContainer=document.getElementById("num2Display");
+            if (num2!=0){
+                numContainer.innerText="宮保雞丁 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num2Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num2Display2");
+            if (num2!=0){
+                numContainer.innerText="| "+num2;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num3Display"></div>
+        <script>
+            var numContainer=document.getElementById("num3Display");
+            if (num3!=0){
+                numContainer.innerText="回鍋肉 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num3Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num3Display2");
+            if (num3!=0){
+                numContainer.innerText="| "+num3;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num4Display"></div>
+        <script>
+            var numContainer=document.getElementById("num4Display");
+            if (num4!=0){
+                numContainer.innerText="蒜蓉炒茄子 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num4Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num4Display2");
+            if (num4!=0){
+                numContainer.innerText="| "+num4;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num5Display"></div>
+        <script>
+            var numContainer=document.getElementById("num5Display");
+            if (num5!=0){
+                numContainer.innerText="家常豆腐 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num5Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num5Display2");
+            if (num5!=0){
+                numContainer.innerText="| "+num5;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="num6Display"></div>
+        <script>
+            var numContainer=document.getElementById("num6Display");
+            if (num6!=0){
+                numContainer.innerText="蒜蓉西蘭花 ";
+            }
+        </script>
+            </td>
+            <td>
+        <div id="num6Display2"></div>
+        <script>
+            var numContainer=document.getElementById("num6Display2");
+            if (num6!=0){
+                numContainer.innerText="| "+num6;
+            }
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div id="rnumDisplay"></div>
+        <script>
+            var numContainer=document.getElementById("rnumDisplay");
+            numContainer.innerText="白飯 ";
+        </script>
+            </td>
+            <td>
+        <div id="rnumDisplay2"></div>
+        <script>
+            var numContainer=document.getElementById("rnumDisplay2");
+            numContainer.innerText="| "+rnum;
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+        <div id="total"></div>
+        <script>
+            var numContainer=document.getElementById("total");
+            total=tnum*8;
+            numContainer.innerText="總共: $"+total;
+        </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="Chinese_thankyou_page.html"><br>
+                <b style="background-color: white;
+                    border: 5px solid rgb(132, 209, 241);
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 50px;">確認</b><br><br></a>
+            </td>
+            <td>
+                <a href="Chinese_GuestMenu_page.html"><br>
+                    <b style="background-color: white;
+                    padding: 5px;
+                    text-align: center;
+                    color: gray;">返回</b><br><br></a>
+            </td>
+        </tr>
+    </table>
+</body>     
+</html>  

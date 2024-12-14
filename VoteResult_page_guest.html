@@ -1,0 +1,87 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Vote Page </title>  
+<script>
+    var flist=localStorage.getItem("foodlist");
+    var foodlist=JSON.parse(flist);
+    for (var i = 1; i <= 12; i++) {
+        window["v" + i] = parseInt(localStorage.getItem("voteresult" + i));
+    }
+</script>
+<style>   
+    Body {  
+      font-family: Calibri, Helvetica, sans-serif;  
+      background-color: white;  
+    }  
+    button {   
+            background-color: white;   
+            width: 30;  
+            color: rgb(0, 174, 255);   
+            padding: 15px;   
+            margin: 10px 0px;   
+            border: none;   
+            cursor: pointer;   
+             } 
+    .container {   
+        background-color:rgb(110, 177, 210);
+        padding: 25px;
+        text-align: center;
+        }   
+    .functionbtn {   
+            width: auto;   
+            padding: 5px 5px;  
+            margin: 5px 5px;  
+    
+        }   
+    .currentbtn{
+        color: gray;
+        width: auto;   
+        padding: 5px 5px;  
+        margin: 5px 5px;  
+    }
+    table{
+        border: 1px;
+        margin: auto;
+        border-spacing: 10px;
+    }
+    th, td{
+        background-color: white;
+        border: 5px solid rgb(132, 209, 241);
+        padding: 5px;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .confirmbtn{
+        background-color:rgb(110, 177, 210);
+    }    
+
+</style>
+</head>    
+<body>  
+    <b style="position: absolute; top: 20px; right:5%;"><a href="Chinese_VoteResult_page_guest.html"> 中/Eng</a></b><br>
+    <div>
+        <center><p style="color:rgb(0, 174, 255);"><img src="Icon.png" alt="Icon" width="80" height="80"><img src="Icon-text.png" alt="Icon-text" width="115" height="85"><img src="Guest-icon2.png" alt="Guest-icon2" width="55" height="65"></p></center>
+        <center>
+            <button type="button" class="functionbtn">  <a href="Vote_page_guest.html"> Vote </a></button>
+            <button type="button" class="functionbtn">  <a href="GuestMenu_page.html"> Menu </a></button>
+            <button type="button" class="functionbtn">  <a href="Discount_page_guest.html"> Discount </a></button>
+            <button type="button" class="functionbtn">  <a href="index.html"> Exit </a></button>
+        </center>
+    </div>  
+ 
+        <div class="container">  
+            <table>
+                <script>
+                    for (var i=1;i<=foodlist.length;i++){
+                        document.write("<tr><td>"+foodlist[i-1]+": "+window['v'+i]+"</td></tr>");
+                    }
+                </script>
+            </table> 
+        </div>      
+</body>     
+</html>  
